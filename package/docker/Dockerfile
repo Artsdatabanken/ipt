@@ -14,6 +14,7 @@ RUN rm -Rf /usr/local/tomcat/webapps \
     && rm -f ipt.war
 
 VOLUME /srv/ipt
+COPY /src/driver/mssql-jdbc-9.2.1.jre8.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
