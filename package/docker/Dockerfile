@@ -1,9 +1,8 @@
 FROM tomcat:8.5-jdk8
 LABEL MAINTAINERS="Markus Döring <mdoering@gbif.org>, Matthew Blissett <mblissett@gbif.org>"
 
-ARG IPT_VERSION
+ENV IPT_VERSION=2.4.2-rd9bfb4b
 ARG IPT_NAME=ROOT
-
 ENV IPT_DATA_DIR=/srv/ipt
 
 RUN rm -Rf /usr/local/tomcat/webapps \
