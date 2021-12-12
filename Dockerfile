@@ -1,5 +1,8 @@
 FROM gbif/ipt
 
+RUN apt-get update
+RUN apt-get upgrade -y
+
 COPY jdbc.properties /usr/local/tomcat/webapps/ROOT/WEB-INF/classes
 COPY mssql-jdbc-9.2.1.jre8.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib
 VOLUME /srv/ipt
